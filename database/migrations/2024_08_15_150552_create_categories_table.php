@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->required();
-            $table->boolean('is_publish')->required();
+            $table->string('name');
+            $table->boolean('is_publish')->default(false);
             $table->timestamps();
         });
     }
